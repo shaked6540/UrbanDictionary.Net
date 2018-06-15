@@ -65,9 +65,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UrbanDictionary.Net\UrbanDictionary.Net.csproj">
+    <ProjectReference Include="..\UrbanDictionary.Net\UrbanDictionaryNet.csproj">
       <Project>{1a54d4b8-5162-4f1d-aef6-2acad0ba2ced}</Project>
-      <Name>UrbanDictionary.Net</Name>
+      <Name>UrbanDictionaryNet</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

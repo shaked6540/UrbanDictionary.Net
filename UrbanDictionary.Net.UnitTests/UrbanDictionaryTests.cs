@@ -1,8 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
-using UrbanDictionary.Net.Models;
 
-namespace UrbanDictionary.Net.UnitTests
+namespace UrbanDictionaryNet.UnitTests
 {
     [TestClass]
     public class UrbanDictionaryTests

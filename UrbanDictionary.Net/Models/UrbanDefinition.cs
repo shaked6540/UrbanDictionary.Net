@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace UrbanDictionary.Net.Models
+namespace UrbanDictionaryNet.Models
 {
     public class UrbanDefinition
     {

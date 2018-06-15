@@ -4,10 +4,10 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using UrbanDictionary.Net.Models;
+using UrbanDictionaryNet.Models;
 using static System.Web.HttpUtility;
 
-namespace UrbanDictionary.Net
+namespace UrbanDictionaryNet
 {
     public static class UrbanDictionary
     {
@@ -19,7 +19,7 @@ namespace UrbanDictionary.Net
         /// <param name="term">The word to define.</param>
         /// <param name="cancellationToken">The cancellation token to cancel the operation.</param>
         /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-        public static async Task<UrbanResult> DefineAsync(string term, CancellationToken cancellationToken = default(CancellationToken))
+        public static async Task<UrbanResult> DefineAsync(string term, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -43,7 +43,7 @@ namespace UrbanDictionary.Net
         /// <param name="term">The word to define.</param>
         /// <param name="cancellationToken">The cancellation token to cancel the operation.</param>
         /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-        public static async Task<string> GetFirstDefinitionAsync(string term, CancellationToken cancellationToken = default(CancellationToken))
+        public static async Task<string> GetFirstDefinitionAsync(string term, CancellationToken cancellationToken = default)
         {
             try
             {

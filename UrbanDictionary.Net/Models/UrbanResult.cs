@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace UrbanDictionary.Net.Models
+namespace UrbanDictionaryNet.Models
 {
     public class UrbanResult
     {

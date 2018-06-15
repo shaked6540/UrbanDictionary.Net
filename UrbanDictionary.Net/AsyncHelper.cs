@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace UrbanDictionary.Net
+namespace UrbanDictionaryNet
 {
     internal static class AsyncHelper
     {

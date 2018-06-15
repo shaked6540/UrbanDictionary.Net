@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Description>A .net wrapper for https://www.urbandictionary.com/</Description>
+    <Copyright>Copyright (c) 2018 Shaked Dahan</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/shaked6540/UrbanDictionary.Net/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/shaked6540/UrbanDictionary.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/shaked6540/UrbanDictionary.Net</RepositoryUrl>
+    <PackageTags>UrbanDictionary</PackageTags>
+    <PackageId>UrbanDictionaryNet</PackageId>
+    <Authors>Shaked Dahan</Authors>
+    <Company>Shaked Dahan</Company>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Summary>A .net wrapper for https://www.urbandictionary.com/</Summary>
+    <Version>1.0.2</Version>
+    <PackageReleaseNotes>Simplified namesapce, added xml docs</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+    <DocumentationFile>bin\Release\netstandard2.0\UrbanDictionaryNet.xml</DocumentationFile>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flurl.Http" Version="2.3.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+</Project>
