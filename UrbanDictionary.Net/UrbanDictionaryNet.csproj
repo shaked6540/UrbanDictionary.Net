@@ -15,8 +15,8 @@
     <Company>Shaked Dahan</Company>
     <NeutralLanguage>en</NeutralLanguage>
     <Summary>A .net wrapper for https://www.urbandictionary.com/</Summary>
-    <Version>1.0.2</Version>
-    <PackageReleaseNotes>Simplified namesapce, added xml docs</PackageReleaseNotes>
+    <Version>1.0.3</Version>
+    <PackageReleaseNotes>Added an option to throw an exception when no definition was found</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

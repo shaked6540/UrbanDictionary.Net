@@ -9,9 +9,18 @@ using static System.Web.HttpUtility;
 
 namespace UrbanDictionaryNet
 {
+    /// <summary>
+    /// A class for getting information from urbandictionary.com
+    /// </summary>
     public static class UrbanDictionary
     {
         private const string APILink = "http://api.urbandictionary.com/v0/define?term=";
+
+        /// <summary>
+        /// If true, all the other methods in this class will throw an exception when there were no results
+        /// </summary>
+        public static bool ThrowOnNotFound { get; set; } = false;
+
 
         /// <summary>
         /// Gets an <see cref="UrbanResult"/> object for the provided term.
@@ -28,6 +37,11 @@ namespace UrbanDictionaryNet
 
                 var json = await fullLink.GetStringAsync(cancellationToken).ConfigureAwait(false);
                 UrbanResult urbanResult = JsonConvert.DeserializeObject<UrbanResult>(json);
+
+                if (ThrowOnNotFound && urbanResult.ResultType == "no_results")
+                    throw new UrbanDictionaryException("Nothing was found");
+                
+
 
                 return urbanResult;
             }
@@ -48,7 +62,12 @@ namespace UrbanDictionaryNet
             try
             {
                 var def = await DefineAsync(term, cancellationToken).ConfigureAwait(false);
-                return def.Definitions.FirstOrDefault().Definition;
+                var defi = def.Definitions.FirstOrDefault()?.Definition;
+
+                if (ThrowOnNotFound && string.IsNullOrWhiteSpace(defi))
+                    throw new UrbanDictionaryException("Nothing was found");
+
+                return defi;
             }
             catch (Exception ex)
             {
